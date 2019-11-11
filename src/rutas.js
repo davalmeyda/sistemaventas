@@ -24,14 +24,33 @@ import cookie from 'react-cookies';
 class Rutas extends Component {
 
     state = {
-        colorHeader: cookie.load('colorHeader'),
-        colorSlider: cookie.load('colorSlider'),
+        colorHeader: cookie.load('colorHeader') == null ? "app-header header-shadow" : cookie.load('colorHeader'),
+        colorSlider: cookie.load('colorSlider') == null ? "app-sidebar sidebar-shadow" : cookie.load('colorSlider'),
     }
 
-    guardarHeader = () => {
+    guardarColor = (colorHeader, colorSlider) => {
+        cookie.save('colorHeader', colorHeader, { path: '/' });
+        cookie.save('colorSlider', colorSlider, { path: '/' });
         this.setState({
-            
-        });
+            colorHeader,
+            colorSlider,
+        })
+    }
+
+    referenciaHeader = null;
+    referenciaSlider = null;
+
+    refHeader = (refs) => {
+        this.referenciaHeader = refs;        
+    }
+    refSlider = (refs) => {
+        this.referenciaSlider = refs;        
+    }
+
+    ddd = () => {
+        this.guardarColor(this.referenciaHeader.header.className, this.referenciaSlider.slider.className);
+        console.log(this.referenciaHeader.header.className);
+        console.log(this.referenciaSlider.slider.className);
     }
 
     render() {
@@ -39,10 +58,10 @@ class Rutas extends Component {
             return (
                 <BrowserRouter>
                     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-                        <HeaderBloque color={this.state.colorHeader} user={this.props.user}></HeaderBloque>
-                        <ConfigBloque accion={this.guardarHeader}></ConfigBloque>
+                        <HeaderBloque referencia={this.refHeader} color={this.state.colorHeader} user={this.props.user}></HeaderBloque>
+                        <ConfigBloque accion={this.ddd}></ConfigBloque>
                         <div className='app-main'>
-                            <SiderBarBloque color={this.state.colorSlider}></SiderBarBloque>
+                            <SiderBarBloque referencia={this.refSlider} color={this.state.colorSlider}></SiderBarBloque>
                             <div className="app-main__outer">
                                 <Switch>
                                     <Route exact path="/" component={InicioPage}></Route>
