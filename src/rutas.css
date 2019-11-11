@@ -9,11 +9,11 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
+/* MIOS */
 
- /* MIOS */
 .divider-per {
     margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;    
+    margin-bottom: 0.5rem !important;
 }
 
 .margin-left-20 {
@@ -29,16 +29,30 @@
 .margin-left-20 .widget-subheading {
     opacity: .5;
 }
-.charts-personalizado{
+
+.charts-personalizado {
     height: 250px;
 }
 
-/* .list-margin{
+.list-margin {
     margin-bottom: 0px !important;
-} */
+}
 
 .scroll-h {
     height: 540px !important;
+}
+
+.boton-flotante {
+    bottom: 50px !important;
+}
+
+.copy {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+.numero-wid{
+    font-size: 3.5rem !important;
 }
 
 /* --- */
@@ -23234,6 +23248,10 @@ a.fc-more:hover {
 
 .card.mb-3 {
     margin-bottom: 30px !important
+}
+
+.card.mb-31 {
+    margin-bottom: 30px
 }
 
 .demo-image-bg {

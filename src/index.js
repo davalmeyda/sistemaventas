@@ -8,6 +8,9 @@ import Rutas from './rutas';
 import firebase from "firebase/app";
 import 'firebase/installations';
 
+// IMPORTAR COOKIE
+import cookie from 'react-cookies';
+
 firebase.initializeApp({
     apiKey: "AIzaSyCCAdkLuNTdZnwLm_-I4iF5LXCe2RKRd1U",
     authDomain: "sistema-ventas-dde3f.firebaseapp.com",
@@ -25,10 +28,23 @@ class App extends Component {
     }
 
     UNSAFE_componentWillMount() {
-        firebase.auth().onAuthStateChanged(async (user) => {
-            this.setState({ user });
-            console.log(user);
-        });
+        const usuario = cookie.load('usuario');
+        console.log('iniciando')
+        if (usuario == null) {
+            firebase.auth().onAuthStateChanged(async (user) => {
+                if (user != null) {
+                    cookie.save('usuario', user, { path: '/' });
+                    this.setState({ user });
+                    console.log(user);
+                    console.log('firebase');
+                }
+            });
+        } else {
+            this.setState({
+                user: usuario,
+            });
+            console.log('cookie');
+        }
     }
 
     render() {

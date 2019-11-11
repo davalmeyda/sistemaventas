@@ -56,7 +56,7 @@ function CharsCompraVenta(props) {
             data={data2}
             keys={['venta', 'compra']}
             indexBy="mes"
-            margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+            margin={{ top: 10, right: 100, bottom: 30, left: 40 }}
             padding={0.3}
             groupMode="grouped"
             colors={{ scheme: 'nivo' }}

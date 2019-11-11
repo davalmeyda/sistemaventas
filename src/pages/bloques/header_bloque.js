@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+// IMPORTAR COOKIE
+import cookie from 'react-cookies';
+
+
+
 class HeaderBloque extends Component {
     state = {
         headerMobile: 'app-header__content',
@@ -14,6 +19,9 @@ class HeaderBloque extends Component {
     // CERRAR SESION
     salir = () => {
         firebase.auth().signOut();
+        cookie.remove('usuario');
+        console.log('salir');
+        window.location.reload();        
     }
 
     render() {
@@ -90,7 +98,8 @@ class HeaderBloque extends Component {
                                                 <img width={42} className="rounded-circle" src="https://www.it.iitb.ac.in/frg/wiki/images/thumb/d/dc/User.jpg/100px-User.jpg" alt="" />
                                                 <i className="fa fa-angle-down ml-2 opacity-8" />
                                             </a>
-                                            <div tabIndex={-1} role="menu" aria-hidden="true" className="dropdown-menu dropdown-menu-right">
+                                            <div tabIndex={-1} role="menu" aria-hidden="true" className="dropdown-menu dropdown-menu-right"> 
+
                                                 <button type="button" tabIndex={0} className="dropdown-item">Perfil</button>
                                                 <button type="button" tabIndex={0} className="dropdown-item">Configuración</button>
                                                 <div tabIndex={-1} className="dropdown-divider" />

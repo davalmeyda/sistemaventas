@@ -12,7 +12,7 @@ class InicioPage extends Component {
                     <div className="page-title-wrapper">
                         <div className="page-title-heading">
                             <div className="page-title-icon">
-                                <i className="pe-7s-car icon-gradient bg-mean-fruit">
+                                <i className="pe-7s-rocket icon-gradient bg-mean-fruit">
                                 </i>
                             </div>
                             <div>Panel de Control
@@ -28,7 +28,7 @@ class InicioPage extends Component {
                         <div className="card mb-3 widget-content bg-midnight-bloom">
                             <div className="widget-content-wrapper text-white">
                                 <div className="widget-content-left">
-                                    <div className="widget-numbers text-white"><span>1896</span></div>
+                                    <div className="widget-numbers text-white numero-wid"><span><i className="metismenu-icon fa fa-cubes" /></span></div>
                                 </div>
                                 <div className="widget-content-right margin-left-20">
                                     <div className="widget-heading">INVENTARIO NETO</div>
@@ -43,7 +43,7 @@ class InicioPage extends Component {
                         <div className="card mb-3 widget-content bg-arielle-smile">
                             <div className="widget-content-wrapper text-white">
                                 <div className="widget-content-left">
-                                    <div className="widget-numbers text-white"><span>1896</span></div>
+                                    <div className="widget-numbers text-white numero-wid"><span><i className="metismenu-icon fa fa-shopping-bag" /></span></div>
                                 </div>
                                 <div className="widget-content-right margin-left-20">
                                     <div className="widget-heading">VENTAS 2019</div>
@@ -58,7 +58,7 @@ class InicioPage extends Component {
                         <div className="card mb-3 widget-content bg-grow-early">
                             <div className="widget-content-wrapper text-white">
                                 <div className="widget-content-left">
-                                    <div className="widget-numbers text-white"><span>1896</span></div>
+                                    <div className="widget-numbers text-white numero-wid"><span><i className="metismenu-icon fa fa-shopping-cart" /></span></div>
                                 </div>
                                 <div className="widget-content-right margin-left-20">
                                     <div className="widget-heading">COMPRAS 2019</div>
@@ -107,7 +107,7 @@ class InicioPage extends Component {
                                         </div>
                                         <h6 className="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">
                                             Mejores Vendedores</h6>
-                                        <div className="scroll-area-sm">
+                                        <div className="scroll-area-md">
                                             <div className="scrollbar-container">
                                                 <ul className="rm-list-borders rm-list-borders-scroll list-group list-group-flush">
                                                     <li className="list-group-item">
@@ -243,15 +243,15 @@ class InicioPage extends Component {
                                 </div>
                             </div>
                             <div className="tab-content">
-                                <div className="main-card mb-3 card">
+                                <div className="main-card mb-31 card list-margin">
                                     <div className="card-body">
                                         <table className="mb-0 table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Factura</th>
-                                                    <th>Cliente</th>
-                                                    <th>Fecha</th>
-                                                    <th>Total</th>
+                                                    <th>FACTURA</th>
+                                                    <th>CLIENTE</th>
+                                                    <th>FECHA</th>
+                                                    <th>TOTAL</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -286,18 +286,6 @@ class InicioPage extends Component {
                                                     <td>3,211.40</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">743</th>
-                                                    <td>Larry larry</td>
-                                                    <td>12/02/19</td>
-                                                    <td>400.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">741</th>
-                                                    <td>Mark mark</td>
-                                                    <td>12/02/19</td>
-                                                    <td>9,500.00</td>
-                                                </tr>
-                                                <tr>
                                                     <th scope="row">742</th>
                                                     <td>Jacob jacob</td>
                                                     <td>12/02/19</td>
@@ -328,6 +316,12 @@ class InicioPage extends Component {
                                                     <td>400.00</td>
                                                 </tr>
                                                 <tr>
+                                                    <th scope="row">741</th>
+                                                    <td>Mark mark</td>
+                                                    <td>12/02/19</td>
+                                                    <td>9,500.00</td>
+                                                </tr>
+                                                <tr>
                                                     <th scope="row">742</th>
                                                     <td>Jacob jacob</td>
                                                     <td>12/02/19</td>
@@ -338,16 +332,17 @@ class InicioPage extends Component {
                                                     <td>Larry larry</td>
                                                     <td>12/02/19</td>
                                                     <td>400.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">742</th>
+                                                    <td>Jacob jacob</td>
+                                                    <td>12/02/19</td>
+                                                    <td>3,211.40</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -358,11 +353,11 @@ class InicioPage extends Component {
                             <div className="widget-content-outer">
                                 <div className="widget-content-wrapper">
                                     <div className="widget-content-left">
-                                        <div className="widget-heading">Total Orders</div>
-                                        <div className="widget-subheading">Last year expenses</div>
+                                        <div className="widget-heading">Facturas</div>
+                                        <div className="widget-subheading">Cantidad de ventas en el dia</div>
                                     </div>
                                     <div className="widget-content-right">
-                                        <div className="widget-numbers text-success">1896</div>
+                                        <div className="widget-numbers text-success">15</div>
                                     </div>
                                 </div>
                             </div>
@@ -373,11 +368,11 @@ class InicioPage extends Component {
                             <div className="widget-content-outer">
                                 <div className="widget-content-wrapper">
                                     <div className="widget-content-left">
-                                        <div className="widget-heading">Products Sold</div>
-                                        <div className="widget-subheading">Revenue streams</div>
+                                        <div className="widget-heading">Ingresos</div>
+                                        <div className="widget-subheading">Ingreso total del dia</div>
                                     </div>
                                     <div className="widget-content-right">
-                                        <div className="widget-numbers text-warning">$3M</div>
+                                        <div className="widget-numbers text-warning">S/. 5215.00</div>
                                     </div>
                                 </div>
                             </div>
@@ -388,61 +383,32 @@ class InicioPage extends Component {
                             <div className="widget-content-outer">
                                 <div className="widget-content-wrapper">
                                     <div className="widget-content-left">
-                                        <div className="widget-heading">Followers</div>
-                                        <div className="widget-subheading">People Interested</div>
+                                        <div className="widget-heading"></div>
+                                        <div className="widget-subheading">Cantidad de Vendedores</div>
                                     </div>
                                     <div className="widget-content-right">
-                                        <div className="widget-numbers text-danger">45,9%</div>
+                                        <div className="widget-numbers text-danger">42</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="d-xl-none d-lg-block col-md-6 col-xl-4">
-                        <div className="card mb-3 widget-content">
-                            <div className="widget-content-outer">
-                                <div className="widget-content-wrapper">
-                                    <div className="widget-content-left">
-                                        <div className="widget-heading">Income</div>
-                                        <div className="widget-subheading">Expected totals</div>
-                                    </div>
-                                    <div className="widget-content-right">
-                                        <div className="widget-numbers text-focus">$147</div>
-                                    </div>
-                                </div>
-                                <div className="widget-progress-wrapper">
-                                    <div className="progress-bar-sm progress-bar-animated-alt progress">
-                                        <div className="progress-bar bg-info" role="progressbar" aria-valuenow={54} aria-valuemin={0} aria-valuemax={100} style={{ width: '54%' }} />
-                                    </div>
-                                    <div className="progress-sub-label">
-                                        <div className="sub-label-left">Expenses</div>
-                                        <div className="sub-label-right">100%</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div className="row">
                     <div className="col-md-12">
                         <div className="main-card mb-3 card">
-                            <div className="card-header">Active Users
-          <div className="btn-actions-pane-right">
-                                    <div role="group" className="btn-group-sm btn-group">
-                                        <button className="active btn btn-focus">Last Week</button>
-                                        <button className="btn btn-focus">All Month</button>
-                                    </div>
-                                </div>
+                            <div className="card-header">Usuarios Activos                                
                             </div>
                             <div className="table-responsive">
                                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                                     <thead>
                                         <tr>
                                             <th className="text-center">#</th>
-                                            <th>Name</th>
-                                            <th className="text-center">City</th>
-                                            <th className="text-center">Status</th>
-                                            <th className="text-center">Actions</th>
+                                            <th>Nombre</th>
+                                            <th className="text-center">Ciudad</th>
+                                            <th className="text-center">Estado</th>
+                                            <th className="text-center">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>

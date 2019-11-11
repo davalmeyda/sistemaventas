@@ -16,24 +16,40 @@ import HeaderBloque from './pages/bloques/header_bloque';
 import ConfigBloque from './pages/bloques/config_bloque';
 import SiderBarBloque from './pages/bloques/siderbar_bloque';
 import InicioPage from './pages/inicio_page';
+import FooterBloque from './pages/bloques/footer_bloque';
+
+// IMPORTAR COOKIE
+import cookie from 'react-cookies';
 
 class Rutas extends Component {
+
+    state = {
+        colorHeader: cookie.load('colorHeader'),
+        colorSlider: cookie.load('colorSlider'),
+    }
+
+    guardarHeader = () => {
+        this.setState({
+            
+        });
+    }
 
     render() {
         if (this.props.user) {
             return (
                 <BrowserRouter>
                     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-                        <HeaderBloque user={this.props.user}></HeaderBloque>
-                        <ConfigBloque></ConfigBloque>
+                        <HeaderBloque color={this.state.colorHeader} user={this.props.user}></HeaderBloque>
+                        <ConfigBloque accion={this.guardarHeader}></ConfigBloque>
                         <div className='app-main'>
-                            <SiderBarBloque></SiderBarBloque>
+                            <SiderBarBloque color={this.state.colorSlider}></SiderBarBloque>
                             <div className="app-main__outer">
                                 <Switch>
                                     <Route exact path="/" component={InicioPage}></Route>
                                     <Route exact path="/nueva-compra" component={NuevaCompraPage}></Route>
                                     <Redirect to="/"></Redirect>
                                 </Switch>
+                                <FooterBloque></FooterBloque>
                             </div>
                         </div>
                     </div>
@@ -51,7 +67,7 @@ class Rutas extends Component {
                 <Switch>
                     <Route exact path="/login" component={LoginPage}></Route>
                     <Redirect to="/login"></Redirect>
-                </Switch>                
+                </Switch>
             </BrowserRouter>
         );
     }
