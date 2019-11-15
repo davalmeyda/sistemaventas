@@ -5,13 +5,16 @@ import PropTypes from 'prop-types';
 
 class SiderBarBloque extends Component {
     state = {  }
+
+    refSlider = React.createRef();
+
     componentDidMount(){
-        this.props.referencia(this.refs);
+        this.props.referencia(this.refSlider);
     }
 
     render() { 
         return (
-            <div ref='slider' className={this.props.color}>
+            <div ref={this.refSlider} className={this.props.color}>
                 {/* HEADER CUANDO SE ACOPLA A LA PAGINA */}
                 <div className="app-header__logo">
                     <div className="logo-src" />

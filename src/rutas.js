@@ -41,16 +41,14 @@ class Rutas extends Component {
     referenciaSlider = null;
 
     refHeader = (refs) => {
-        this.referenciaHeader = refs;        
+        this.referenciaHeader = refs.current;
     }
     refSlider = (refs) => {
-        this.referenciaSlider = refs;        
+        this.referenciaSlider = refs.current;
     }
 
     ddd = () => {
-        this.guardarColor(this.referenciaHeader.header.className, this.referenciaSlider.slider.className);
-        console.log(this.referenciaHeader.header.className);
-        console.log(this.referenciaSlider.slider.className);
+        this.guardarColor(this.referenciaHeader.className, this.referenciaSlider.className);
     }
 
     render() {

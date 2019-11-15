@@ -22,13 +22,15 @@ class HeaderBloque extends Component {
         window.location.reload();
     }
 
+    refHeader = React.createRef();
+
     componentDidMount(){
-        this.props.referencia(this.refs);
+        this.props.referencia(this.refHeader);
     }
 
     render() {
         return (
-            <div ref='header' className={this.props.color}>
+            <div ref={this.refHeader} className={this.props.color}>
                 <div className="app-header__logo">
                     <div className="logo-src" />
                     <div className="header__pane ml-auto">
